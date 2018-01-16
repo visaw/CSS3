@@ -217,7 +217,7 @@ html, body {
     height: 100px;
     transform-style: preserve-3d;
     -webkit-animation: rabbit 5s infinite;
-    animation: rabbit 5s infinite;
+    animation: rabbit 5s infinite linear;
 }
 
 @keyframes rabbit {
