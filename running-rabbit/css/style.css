@@ -1,3 +1,4 @@
+/*通配样式，去除所有元素的margin/padding/border/outline*/
 * {
     margin: 0;
     padding: 0;
@@ -5,11 +6,13 @@
     outline: none;
 }
 
+/*设置html元素填满可视屏幕区域， 超出部分隐藏*/
 html, body {
     height: 100%;
     overflow: hidden;
 }
 
+/*画天空的渐变色，同时兼容webkit/moz/ms/o内核浏览器*/
 .sky {
     height: 60%;
     background: -webkit-linear-gradient(180deg, rgb(196, 228, 253) 0%, rgb(255, 255, 255) 100%);
@@ -19,6 +22,7 @@ html, body {
     background: linear-gradient(180deg, rgb(196, 228, 253) 0%, rgb(255, 255, 255) 100%);
 }
 
+/*画草地的渐变色，同时兼容webkit/moz/ms/o内核浏览器*/
 .grassland {
     position: relative;
     width: 100%;
@@ -30,12 +34,14 @@ html, body {
     background: linear-gradient(0deg, rgb(148, 190, 89) 0%, rgb(255, 255, 255) 100%);
 }
 
+/*设置云朵相对定位*/
 .clouds {
     position: relative;
     width: 100%;
     height: 60%;
 }
 
+/*设置每一片云朵的本体为一个长椭圆*/
 .cloud {
     position: absolute;
     width: 220px;
@@ -44,6 +50,7 @@ html, body {
     background: #fff;
 }
 
+/*设置云朵前伪元素*/
 .cloud::before {
     position: absolute;
     content: '';
@@ -58,6 +65,7 @@ html, body {
     transform: rotate(60deg) translate(-5px, -10px);
 }
 
+/*设置云朵后伪元素*/
 .cloud::after {
     position: absolute;
     content: '';
@@ -72,6 +80,7 @@ html, body {
     transform: translate(80px, -60px);
 }
 
+/*第一朵云的位置/透明度/动画，并兼容手机浏览器内核*/
 .cloud:first-child {
     top: 30%;
     left: 100%;
@@ -80,6 +89,7 @@ html, body {
     animation: move1 5s infinite linear;
 }
 
+/*第二朵云的位置/透明度/动画，并兼容手机浏览器内核*/
 .cloud:nth-child(2) {
     top: 40%;
     left: 100%;
@@ -88,6 +98,7 @@ html, body {
     animation: move2 4s infinite 1s linear;
 }
 
+/*第三朵云的位置/透明度/动画，并兼容手机浏览器内核*/
 .cloud:nth-child(3) {
     top: 20%;
     left: 100%;
@@ -96,6 +107,7 @@ html, body {
     animation: move3 6s infinite 2s linear;
 }
 
+/*第四朵云的位置/透明度/动画，并兼容手机浏览器内核*/
 .cloud:nth-child(4) {
     top: 50%;
     left: 100%;
@@ -104,6 +116,7 @@ html, body {
     animation: move4 8s infinite linear;
 }
 
+/*第五朵云的位置/透明度/动画，并兼容手机浏览器内核*/
 .cloud:last-child {
     top: 40%;
     left: 100%;
@@ -112,6 +125,7 @@ html, body {
     animation: move5 7s infinite 1s linear;
 }
 
+/*第一朵云的动画*/
 @keyframes move1 {
     from {
         left: 100%;
@@ -132,6 +146,7 @@ html, body {
     }
 }
 
+/*第二朵云的动画*/
 @keyframes move2 {
     from {
         left: 100%;
@@ -152,6 +167,7 @@ html, body {
     }
 }
 
+/*第三朵云的动画*/
 @keyframes move3 {
     from {
         left: 100%;
@@ -172,6 +188,7 @@ html, body {
     }
 }
 
+/*第四朵云的动画*/
 @keyframes move4 {
     from {
         left: 100%;
@@ -192,6 +209,7 @@ html, body {
     }
 }
 
+/*第五朵云的动画*/
 @keyframes move5 {
     from {
         left: 100%;
@@ -212,6 +230,7 @@ html, body {
     }
 }
 
+/*设置兔子整体div*/
 .rabbit {
     position: absolute;
     width: 200px;
@@ -221,6 +240,7 @@ html, body {
     animation: rabbit 5s infinite linear;
 }
 
+/*兔子的整体动画轨迹*/
 @keyframes rabbit {
     0% {
         left: 100%;
@@ -291,6 +311,7 @@ html, body {
 
 }
 
+/*画兔子的头部形状*/
 .head {
     position: absolute;
     width: 50px;
@@ -308,6 +329,7 @@ html, body {
     transform: rotate(50deg);
 }
 
+/*兔子的眼睛形状及左眼定位*/
 .eye {
     position: absolute;
     width: 20px;
@@ -322,6 +344,7 @@ html, body {
     transform: translate(-5px, 10px) rotate(105deg);
 }
 
+/*兔子的眼珠*/
 .eye::before {
     position: absolute;
     content: '';
@@ -337,6 +360,7 @@ html, body {
     transform: translate(5px, 4px);
 }
 
+/*兔子右眼的定位*/
 .eye.right {
     -webkit-transform: scale(-1, 1) translate(-15px, 12px) rotate(105deg);
     -moz-transform: scale(-1, 1) translate(-15px, 12px) rotate(105deg);
@@ -345,6 +369,7 @@ html, body {
     transform: scale(-1, 1) translate(-15px, 12px) rotate(105deg);
 }
 
+/*鼻子的形状*/
 .nose {
     position: absolute;
     width: 12px;
@@ -359,6 +384,7 @@ html, body {
     transform: translate(9px, 26px) rotate(10deg);
 }
 
+/*兔子嘴唇的形状以及左唇瓣的定位*/
 .lip {
     position: absolute;
     width: 12px;
@@ -376,6 +402,7 @@ html, body {
     transform: translate(2px, 30px) rotate(-15deg);
 }
 
+/*右唇瓣的定位*/
 .lip.right {
     -webkit-transform: scale(-1, 1) translate(-14px, 30px) rotate(-15deg);
     -moz-transform: scale(-1, 1) translate(-14px, 30px) rotate(-15deg);
@@ -384,6 +411,7 @@ html, body {
     transform: scale(-1, 1) translate(-14px, 30px) rotate(-15deg);
 }
 
+/*兔子三根胡须中间那一根的样式*/
 .mustache {
     position: absolute;
     width: 16px;
@@ -398,6 +426,7 @@ html, body {
     transform: translate(-10px, -1px) rotate(60deg);
 }
 
+/*三根胡须上面那一根的样式*/
 .mustache::before {
     position: absolute;
     content: '';
@@ -412,6 +441,7 @@ html, body {
     transform: translate(0, -10px) rotate(20deg);
 }
 
+/*三根胡须下面那一根的样式*/
 .mustache::after {
     position: absolute;
     content: '';
@@ -426,6 +456,7 @@ html, body {
     transform: translate(2px, 10px) rotate(-40deg);
 }
 
+/*右边三根胡须的定位*/
 .mustache.right {
     -webkit-transform: scale(-1, 1) translate(-30px, 40px) rotate(-40deg);
     -moz-transform: scale(-1, 1) translate(-30px, 40px) rotate(-40deg);
@@ -434,6 +465,7 @@ html, body {
     transform: scale(-1, 1) translate(-30px, 40px) rotate(-40deg);
 }
 
+/*左边耳朵的样式和定位*/
 .ear {
     position: absolute;
     width: 60px;
@@ -452,6 +484,7 @@ html, body {
     transform: translate(25px, -20px) rotate(125deg);
 }
 
+/*右边耳朵的定位*/
 .ear.right {
     -webkit-transform:scale(-1, 1) translate(-40px, 0) rotate(10deg);
     -moz-transform:scale(-1, 1) translate(-40px, 0) rotate(10deg);
@@ -460,6 +493,7 @@ html, body {
     transform:scale(-1, 1) translate(-40px, 0) rotate(10deg);
 }
 
+/*兔子的身体*/
 .body {
     position: absolute;
     width: 60px;
@@ -475,6 +509,7 @@ html, body {
     background: linear-gradient(-135deg, #d9e0d9 0%, #ffffff 100%);
 }
 
+/*兔子左前臂*/
 .arm {
     position: absolute;
     width: 20px;
@@ -511,6 +546,7 @@ html, body {
     }
 }
 
+/*兔子右臂的定位*/
 .arm.right {
     left: 35px;
     top: 45px;
@@ -533,6 +569,7 @@ html, body {
     }
 }
 
+/*兔子后腿的样式和定位*/
 .leg {
     position: absolute;
     width: 36px;
@@ -555,6 +592,7 @@ html, body {
     animation: leg 1s infinite;
 }
 
+/*兔子后退的动画*/
 @keyframes leg {
     0% {
         transform: rotate(60deg);
@@ -569,6 +607,7 @@ html, body {
     }
 }
 
+/*兔子脚板的样式和定位*/
 .foot {
     position: absolute;
     width: 30px;
@@ -587,6 +626,7 @@ html, body {
     animation: foot 1s infinite;
 }
 
+/*兔子脚板跑起来的动画*/
 @keyframes foot {
     0% {
         transform: rotate(-10deg) translate(0, 0);
@@ -601,6 +641,7 @@ html, body {
     }
 }
 
+/*兔子尾巴的样式*/
 .tail {
     position: absolute;
     width: 30px;
@@ -619,6 +660,7 @@ html, body {
     animation: tail 1s infinite;
 }
 
+/*尾巴的动画*/
 @keyframes tail {
     0% {
         transform: rotate(-70deg);
